@@ -1,22 +1,22 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Button, Center, Container, Flex, Icon, Link, Show } from "@chakra-ui/react"
+import { Box, Button, Center, Container, Flex, Icon, Link, Show, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 
 
 const Navbar = () => {
    return (
-      <Box  backgroundColor='green.50'>
+      <Box  backgroundColor='black'>
 
          <Show breakpoint='(min-width: 500px)'>
             <Center>
                <NextLink href="google.com">
-                  <Link color='green.500' p={5} size='md'>Home</Link>
+                  <Link color='green.200' px={5}><Text fontSize="4xl">Home</Text></Link>
                </NextLink>
                <NextLink href="google.com">
-                  <Link color='green.500' p={5}>Music</Link>
+                  <Link color='green.200' px={5}><Text fontSize="4xl">Music</Text></Link>
                </NextLink>
                <NextLink href="google.com">
-                  <Link color='green.500' p={5}>Contact Us</Link>
+                  <Link color='green.200' px={5}><Text fontSize="4xl">Contact Us</Text></Link>
                </NextLink>
             </Center>
          </Show>

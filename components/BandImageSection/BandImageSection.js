@@ -8,8 +8,8 @@ import styles from "./styles.module.css"
 const BandImageSection = () => {
    return(
       <section class={styles.container}>
-         <NextImage src={BandImage}></NextImage>
-         <Text class={styles.centered}>Test</Text>
+         <NextImage src={BandImage} ></NextImage>
+         <p class={styles.text}>Botanical Selections</p>
       </section>
    )
 }
