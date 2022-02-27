@@ -7,13 +7,7 @@ import { extendTheme } from '@chakra-ui/react'
 const config = {
    initialColorMode: 'dark',
    useSystemColorMode: false,
-   styles: {
-      global: (props) => ({
-         body: {
-            bg: mode(white(string), black(string))(props),
-         }
-      })
-   }
+   
 }
 
 // 3. extend the theme

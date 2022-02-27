@@ -5,7 +5,7 @@ import {Box} from '@chakra-ui/react'
 export default function Home() {
   return (
     <Box backgroundColor='black'>
-      <Navbar/>
+      <Navbar />
       <BandImageSection />
     </Box>
     
