@@ -1,6 +1,6 @@
 import { HamburgerIcon } from "@chakra-ui/icons"
 import React from "react"
-import { Box, Button, Grid, useDisclosure, Input } from "@chakra-ui/react"
+import { Box, Button, Grid, useDisclosure, Input, Stack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import {
    Drawer,
@@ -46,7 +46,10 @@ const SmallNav = () => {
                <DrawerHeader>BotanicalSelections</DrawerHeader>
 
                <DrawerBody>
-                  <Nav />
+                  <Stack margin={5}>
+                     <Nav instagram={true}/>
+                  </Stack>
+                  
                </DrawerBody>
 
             </DrawerContent>
