@@ -10,8 +10,8 @@ const Nav = ({ instagram }) => {
          <NextLink href="/">
             <Link color='green.200' px={3}><Text fontSize="2xl">Home</Text></Link>
          </NextLink>
-         <NextLink href="https://www.instagram.com/botanicalselectionsband/" passHref={true}>
-            <Link target='_blank' color='green.200' px={3}><Text fontSize="2xl">Music</Text></Link>
+         <NextLink href="/about" passHref={true}>
+            <Link color='green.200' px={3}><Text fontSize="2xl">About</Text></Link>
          </NextLink>
          <NextLink href="contact">
             <Link color='green.200' px={3}><Text fontSize="2xl">Contact Us</Text></Link>

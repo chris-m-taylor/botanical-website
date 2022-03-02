@@ -16,7 +16,7 @@ const LargeNav = () => {
 
          <NextLink href="https://www.instagram.com/botanicalselectionsband/" passHref={true}>
             <Link target='_blank' color='pink.200' px={3} textAlign='center' m='auto'>
-               <Text fontSize="2xl">Instagrams</Text>
+               <Text fontSize="2xl">Instagram</Text>
             </Link>
          </NextLink>
       </Grid>

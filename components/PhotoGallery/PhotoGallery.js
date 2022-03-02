@@ -1,14 +1,16 @@
-import { Box, Flex, Grid, Show } from '@chakra-ui/react'
-import { GalleryImages } from '../../public/images'
-import styles from './styles.module.css'
+import { Box, Flex, Grid, Show } from '@chakra-ui/react';
+import { GalleryImages } from '../../public/images';
+import styles from './styles.module.css';
 
 
-const PhotoGallery = () => {
-   let imagesHtml = GalleryImages.map((image, index) => {
-      return <img class={styles.image} src={image.src}></img>
+const RenderGallery = ( images ) => {
+   
+   let imagesHtml = images.map((image, index) => {
+      return <img key={index} className={styles.image} src={image.src}></img>
    })
+
    return (
-      <Box margin={10}>
+      <>
          <Show above="1050px">
             <Grid templateColumns='1fr 1fr 1fr' templateRows='1fr 1fr'>
                {imagesHtml}
@@ -19,7 +21,16 @@ const PhotoGallery = () => {
                {imagesHtml}
             </Grid>
          </Show>
+      </>
 
+   )
+}
+
+const PhotoGallery = () => {
+   
+   return (
+      <Box margin={10}>
+         {RenderGallery(GalleryImages)}
       </Box>
    )
 }

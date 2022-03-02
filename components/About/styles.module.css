@@ -1,0 +1,25 @@
+.imgLarge {
+   margin: 5px;
+   width: 50%;
+   object-fit: cover;
+}
+
+.imgSmall {
+   width: auto;
+}
+
+.card {
+   width: 75%;
+}
+
+.bigContainer {
+   width: 75%;
+}
+
+.name {
+   font-size: 50px;
+}
+
+.summary{
+   font-size: 20px;
+}
