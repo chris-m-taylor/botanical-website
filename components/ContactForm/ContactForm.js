@@ -1,63 +1,74 @@
 import { Button, Input, Stack, Text, Textarea } from "@chakra-ui/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
-const sendPost = async (fullName, email, message) => {
-    
-    let body = {
-        "fullName": fullName,
-        "senderEmail": email,
-        "message": message
-    }
-    
-    const response = await fetch("/api/email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(body)
-    });
-  
-    if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
-    }
-    console.log("email sent!")
+const sendPost = async (fullName, email, message, recaptchaValue) => {
 
+  if (!fullName || !email || !message || !recaptchaValue) {
+    console.log("NEED TO FILL OUT ALL FIELDS")
+    return
+  }
+
+  console.log(recaptchaValue)
+  let body = {
+    "fullName": fullName,
+    "senderEmail": email,
+    "message": message,
+    "recaptchaToken": recaptchaValue,
+  }
+
+  const response = await fetch("/api/email", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  });
+
+  if (!response.ok) {
+    throw new Error(`Error: ${response.status}`);
+  }
+  console.log("email sent!")
 }
 
 
 const ContactForm = () => {
-    const [fullName, setFullName] = useState()
-    const [email, setEmail] = useState()
-    const [message, setMessage] = useState()
+  const [fullName, setFullName] = useState(null)
+  const [email, setEmail] = useState(null)
+  const [message, setMessage] = useState(null)
+  const recaptchaRef = useRef(null)
+  const [recaptchaValue, setRecaptchaValue] = useState(null)
 
-    return(
-         <Stack direction='column' alignItems='center' marginTop={200} marginBottom={300} background="black">
-            
-            <Text fontSize='7xl'>Contact Us</Text>
 
-            <Stack size>
-                <Text fontSize='6xl'>Send us an email</Text>
+  return (
+    <Stack direction='column' alignItems='center' marginTop={200} marginBottom={300} background="black">
 
-                <Input placeholder="First and Last Name"  onChange={(event) => setFullName(event.target.value)}></Input>
-                <Input placeholder="Email" onChange={(event) => setEmail(event.target.value)}></Input>
-                <Textarea placeholder="Message" onChange={(event) => setMessage(event.target.value)}></Textarea>
-                <Button onClick={() => sendPost(fullName, email, message)} color='green.100' backgroundColor='green.900' size='lg' m={10}>Send</Button>
-            </Stack>
-            
-            <Text fontSize='4xl'>
-               Message us on Instagram
-            </Text>
-            <Text fontSize='xl' m={5}>
-               @BotanicalSelectionsBand
-            </Text >
-            <Button color='green.100' backgroundColor='green.900' size='lg' m={10}>
-               <a href="https://www.instagram.com/botanicalselectionsband/">
-                  DM US
-               </a>
-            </Button>
-         </Stack> 
-   )
+      <Text fontSize='7xl'>Contact Us</Text>
+
+      <Stack>
+        <Text fontSize='6xl'>Send us an email</Text>
+
+        <Input placeholder="First and Last Name" onChange={(event) => setFullName(event.target.value)}></Input>
+        <Input placeholder="Email" onChange={(event) => setEmail(event.target.value)}></Input>
+        <Textarea placeholder="Message" onChange={(event) => setMessage(event.target.value)}></Textarea>
+        <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={setRecaptchaValue} />
+        <Button onClick={() => sendPost(fullName, email, message, recaptchaValue)} color='green.100' backgroundColor='green.900' size='lg' m={10}>Send</Button>
+      </Stack>
+
+      <Text fontSize='4xl'>
+        Message us on Instagram
+      </Text>
+      <Text fontSize='xl' m={5}>
+        @BotanicalSelectionsBand
+      </Text >
+      <Button color='green.100' backgroundColor='green.900' size='lg' m={10}>
+        <a href="https://www.instagram.com/botanicalselectionsband/">
+          DM US
+        </a>
+      </Button>
+    </Stack>
+  )
 }
 
 export default ContactForm;
