@@ -78,6 +78,7 @@ const ContactForm = () => {
   const recaptchaRef = useRef(null)
   const [recaptchaValue, setRecaptchaValue] = useState(null)
 
+  const recapatchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   return (
     <>
@@ -101,7 +102,7 @@ const ContactForm = () => {
           <Input placeholder="First and Last Name" onChange={(event) => setFullName(event.target.value)}></Input>
           <Input placeholder="Email" onChange={(event) => setEmail(event.target.value)}></Input>
           <Textarea placeholder="Message" onChange={(event) => setMessage(event.target.value)}></Textarea>
-          <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={setRecaptchaValue} />
+          <ReCAPTCHA ref={recaptchaRef} sitekey={recapatchaSiteKey} onChange={setRecaptchaValue} />
           <Button onClick={() => sendPost(fullName, email, message, recaptchaValue)} color='green.100' backgroundColor='green.900' size='lg' m={10}>Send</Button>
         </Stack>
 
