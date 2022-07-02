@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 const Bio = ({ image, summary, name }) => {
    return (
       <>
-         <Center marginTop={20}>
+         <Center marginBottom={20}>
                <Show above="1050px">
                      <Flex className={styles.bigContainer} justifyContent="center">
                         <img src={image.src} className={styles.imgLarge} />

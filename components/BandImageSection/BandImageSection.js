@@ -6,15 +6,12 @@ const BandImageSection = () => {
    return(
          <>
          <Show above="1050px">
-               <img className={styles.imgLarge} src={BandImage.src} />
+            <img className={styles.imgLarge} src={BandImage.src} />
          </Show>
          <Show below="1049px">
             <img className={styles.imgSmall} src={BandImage.src} />
          </Show>
          </>
-         
-
-         
    )
 }
 
