@@ -91,7 +91,7 @@ const ContactForm = () => {
         draggable
         pauseOnHover
       />
-      <Stack direction='column' alignItems='center' marginTop={200} marginBottom={300} background="black">
+      <Stack direction='column' alignItems='center' marginTop={100} marginBottom={300} background="black">
         <Text fontSize='7xl'>Contact Us</Text>
 
         <Stack>
