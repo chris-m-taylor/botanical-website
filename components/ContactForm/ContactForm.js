@@ -29,47 +29,46 @@ const sendPost = async (fullName, email, message, recaptchaValue) => {
     "recaptchaToken": recaptchaValue,
   }
 
-  toast('Sending Email', {
+  let emailToast = toast.info('Sending email...', {
     position: "top-left",
-    autoClose: 5000,
+    autoClose: false,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
-    progress: undefined,
-  });
+    });
+
   const response = await fetch("/api/email", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(body)
-  });
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+      }
+    );
 
   if (!response.ok) {
-    console.log(`Error: ${response.status}`);
-    toast('Error when sending email, please try again.', {
-      position: "top-left",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.update(emailToast, 
+      {
+        type: toast.TYPE.ERROR,
+        render: 'Problem sending email, please message us on Instagram',
+        autoClose: 5000,
+        progress: undefined,
+      });
+    console.log(response);
   }
-  console.log("email sent!")
-  toast('Email Sent!', {
-    position: "top-left",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-  });
+  else{
+    toast.update(emailToast, 
+      {
+        type: toast.TYPE.SUCCESS,
+        render: 'Email Sent!',
+        autoClose: 5000,
+        progress: undefined,
+      }
+    )
+    console.log(response);
+  }
 }
-
 
 const ContactForm = () => {
   const [fullName, setFullName] = useState(null)
@@ -84,9 +83,8 @@ const ContactForm = () => {
     <>
       <ToastContainer
         position="top-left"
-        autoClose={5000}
         hideProgressBar={false}
-        newestOnTop={false}
+        newestOnTop
         closeOnClick
         rtl={false}
         pauseOnFocusLoss

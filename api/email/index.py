@@ -5,6 +5,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 import os
 import json
+import time
 
 load_dotenv()  # take environment variables from .env.
 
@@ -13,7 +14,6 @@ FROM_EMAIL = os.environ.get("FROM_EMAIL", "Couldn't find")
 TO_EMAIL = os.environ.get("TO_EMAIL", "Couldn't find")
 RECAPTCHA_URL = os.environ.get("RECAPTCHA_URL", "Couldn't find")
 RECAPTCHA_SECRET_KEY = os.environ.get("RECAPTCHA_SECRET_KEY", "Couldn't find")
-
 
 """
     Mock request
@@ -48,8 +48,6 @@ class handler(BaseHTTPRequestHandler):
         print(response_dict)
         return response_dict['success'] == True
 
-        
-
     def do_POST(self):
         
         request_dict = self.parse_request_body()
@@ -61,6 +59,7 @@ class handler(BaseHTTPRequestHandler):
             self.send_response(400, "recaptcha was not verified")
 
         else:
+          time.sleep(1) # Allow time for "sending email" toast to show up for user
           print("Attempting to send email")
           # using SendGrid's Python Library
           # https://github.com/sendgrid/sendgrid-python
