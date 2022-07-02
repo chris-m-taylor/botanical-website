@@ -95,7 +95,7 @@ const ContactForm = () => {
         <Text fontSize='7xl'>Contact Us</Text>
 
         <Stack>
-          <Text fontSize='6xl'>Send us an email</Text>
+          <Text fontSize='6xl' textAlign='center'>Send us an email</Text>
 
           <Input placeholder="First and Last Name" onChange={(event) => setFullName(event.target.value)}></Input>
           <Input placeholder="Email" onChange={(event) => setEmail(event.target.value)}></Input>
