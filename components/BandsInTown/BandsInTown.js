@@ -13,7 +13,7 @@ export default function Shows() {
       />
 
       <a 
-        class="bit-widget-initializer"
+        className="bit-widget-initializer"
         
         data-artist-name="id_15506954"
         
