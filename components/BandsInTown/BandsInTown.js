@@ -1,15 +1,14 @@
 import { Box } from "@chakra-ui/react";
 import Script from "next/script";
-import React, { useEffect } from "react"
 
 export default function Shows() {
-  
+
   return (
     <Box>
+      {/* Also loading here for initial page load if navigating to this link first */}
       <Script 
         id="bands-in-town" 
-        src='https://widgetv3.bandsintown.com/main.min.js'
-        strategy="afterInteractive"
+        src='/scripts/bandsintown/main.min.js'
       />
 
       <a 
