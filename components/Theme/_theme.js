@@ -9,7 +9,16 @@ const config = {
    useSystemColorMode: false,
 }
 
-// 3. extend the theme
-const theme = extendTheme({ config })
+// 3. extend the theme https://github.com/chakra-ui/chakra-ui/discussions/5048
+const theme = extendTheme({ 
+  config,
+  styles: {
+    global: (props) => ({
+      body: {
+        bg: 'black'
+      }
+    })
+  }
+ })
 
 export {theme}
