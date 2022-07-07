@@ -12,6 +12,7 @@ import {
    DrawerCloseButton,
 } from '@chakra-ui/react'
 import Nav from "./nav"
+import Socials from "./Socials/Socials"
 
 
 const SmallNav = () => {
@@ -47,8 +48,9 @@ const SmallNav = () => {
 
                <DrawerBody>
                   <Stack margin={5}>
-                     <Nav instagram={true}/>
+                     <Nav/>            
                   </Stack>
+                  <Socials />
                   
                </DrawerBody>
 
