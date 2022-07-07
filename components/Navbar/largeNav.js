@@ -1,24 +1,21 @@
 import { Box, Flex, Grid, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import Nav from "./nav";
+import Socials from "./Socials/Socials";
 
 const LargeNav = () => {
    return (
-      <Grid templateColumns='1fr 1fr 1fr'>
+      <Grid templateColumns='1fr 1fr 1fr' mt={2.5} mb={2.5}>
 
-         <Flex margin={5}>
-            <Nav instagram={false}/>
+         <Flex justifyContent='space-around'>
+            <Nav/>
          </Flex>
 
-         <Box textAlign='center' m='auto' fontSize='2xl'>
+         <Box textAlign='center' fontSize='2xl'>
             <NextLink href="/">BOTANICAL SELECTIONS</NextLink>
          </Box>
 
-         <NextLink href="https://www.instagram.com/botanicalselectionsband/" passHref={true}>
-            <Link target='_blank' color='pink.200' px={3} textAlign='center' m='auto'>
-               <Text fontSize="2xl">Instagram</Text>
-            </Link>
-         </NextLink>
+         <Socials />
       </Grid>
    )
 }
