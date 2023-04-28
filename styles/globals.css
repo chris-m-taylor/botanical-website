@@ -16,10 +16,11 @@ a {
   box-sizing: border-box;
 }
 
-.css-asn9ko {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: var(--chakra-space-2-5);
-  margin-bottom: var(--chakra-space-2-5);
-  background-color: white;
+.SocialLinkButton{
+  padding-top: 5%;
+}
+.SocialLinkButton:hover{
+  border: solid;
+  border-radius: 10px;
+  border-color: aquamarine;
 }

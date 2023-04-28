@@ -1,7 +1,7 @@
 // theme.js
 
 // 1. import `extendTheme` function
-import { extendTheme } from '@chakra-ui/react'
+import { color, extendTheme } from '@chakra-ui/react'
 
 // 2. Add your color mode config
 const config = {
@@ -15,7 +15,8 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       body: {
-        bg: 'black'
+        bg: '#dddddd',
+        color: "black"
       }
     })
   }

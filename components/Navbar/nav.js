@@ -7,16 +7,24 @@ const Nav = ({ socials }) => {
    return (
       <>
          <NextLink href="/">
-            <Link color='green.200'><Text fontSize="2xl">Home</Text></Link>
+         <button className="SocialLinkButton">
+            <Link color='#8fd7a7'><Text fontSize="2xl">Home</Text></Link>
+         </button>
          </NextLink>
          <NextLink href="/about" passHref={true}>
-            <Link color='green.200'><Text fontSize="2xl">About</Text></Link>
+         <button className="SocialLinkButton">
+            <Link color='#8fd7a7'><Text fontSize="2xl">About</Text></Link>
+         </button>
          </NextLink>
          <NextLink href="/shows" passHref={true}>
-            <Link color='green.200'><Text fontSize="2xl">Shows</Text></Link>
+         <button className="SocialLinkButton">
+            <Link color='#8fd7a7'><Text fontSize="2xl">Shows</Text></Link>
+         </button>
          </NextLink>
          <NextLink href="contact">
-            <Link color='green.200'><Text fontSize="2xl">Contact Us</Text></Link>
+         <button className="SocialLinkButton">
+            <Link color='#8fd7a7'><Text fontSize="2xl">Contact Us</Text></Link>
+         </button>
          </NextLink>
       </>
    )

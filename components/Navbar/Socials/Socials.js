@@ -7,14 +7,18 @@ const Socials = () => {
   return(
     <Flex textAlign='center' justifyContent='space-evenly' >
       <NextLink href="https://www.instagram.com/botanicalselectionsband/" passHref={true} padding={0} margin={0}>
-        <Link target='_blank' color='pink.200'>
-        <Text fontSize="2xl">Instagram</Text>
+      <button className="SocialLinkButton">
+        <Link target='_blank' color='#ffa1f2'>
+           <Text fontSize="2xl">Instagram</Text>
         </Link>
+      </button>
       </NextLink>
       <NextLink href="https://www.youtube.com/channel/UCgqHx-y3cT0fvM0Yo_YBjLA" passHref={true} padding={0} margin={0}>
-        <Link target='_blank' color='pink.200'>
+      <button className="SocialLinkButton">
+        <Link target='_blank' color='#ffa1f2'>
           <Text fontSize="2xl">YouTube</Text>
         </Link>
+      </button>
       </NextLink>
     </Flex>
   )

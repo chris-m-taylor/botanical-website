@@ -5,7 +5,7 @@ import Socials from "./Socials/Socials";
 
 const LargeNav = () => {
    return (
-      <Grid templateColumns='1fr 1fr 1fr' mt={2.5} mb={2.5}>
+      <Grid backgroundColor="white" templateColumns='1fr 1fr 1fr' mt={2.5} mb={2.5}>
 
          <Flex justifyContent='space-around'>
             <Nav/>

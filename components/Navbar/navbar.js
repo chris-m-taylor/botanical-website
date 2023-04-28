@@ -8,7 +8,7 @@ const Navbar = () => {
       <Box>
 
          <Show breakpoint='(min-width: 1059px)'>
-            <LargeNav />
+            <LargeNav border-bottom="solid;"/>
          </Show>
 
          <Show breakpoint="(max-width: 1058px)">
