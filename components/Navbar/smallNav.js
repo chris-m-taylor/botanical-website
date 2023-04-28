@@ -23,7 +23,7 @@ const SmallNav = () => {
       <>
          <Grid templateColumns='1fr 1fr'>
             <Box textAlign='center' m='auto' ml='2' fontSize='2xl'>
-               <NextLink href="/">BOTANICAL SELECTIONS</NextLink>
+               <NextLink href="/"><img src="/images/BS-Logo-50px.jpg"/></NextLink>
             </Box>
 
             <Box textAlign='right'>

@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: black;
+  background-color: white;
 }
 
 a {
@@ -14,4 +14,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.css-asn9ko {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: var(--chakra-space-2-5);
+  margin-bottom: var(--chakra-space-2-5);
+  background-color: white;
 }

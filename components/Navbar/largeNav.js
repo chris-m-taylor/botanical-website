@@ -12,7 +12,7 @@ const LargeNav = () => {
          </Flex>
 
          <Box textAlign='center' fontSize='2xl'>
-            <NextLink href="/">BOTANICAL SELECTIONS</NextLink>
+            <NextLink href="/"><img src="/images/Botanical Selections logo Banner.jpg"/></NextLink>
          </Box>
 
          <Socials />
