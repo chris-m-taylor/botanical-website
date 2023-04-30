@@ -17,10 +17,5 @@ a {
 }
 
 .SocialLinkButton{
-  padding-top: 5%;
-}
-.SocialLinkButton:hover{
   border: solid;
-  border-radius: 10px;
-  border-color: aquamarine;
 }

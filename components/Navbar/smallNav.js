@@ -23,12 +23,12 @@ const SmallNav = () => {
       <>
          <Grid templateColumns='1fr 1fr'>
             <Box textAlign='center' m='auto' ml='2' fontSize='2xl'>
-               <NextLink href="/"><img src="/images/BS-Logo-50px.jpg"/></NextLink>
+               <NextLink href="/"><img src="/images/Botanical Selections logo Banner.jpg"/></NextLink>
             </Box>
 
             <Box textAlign='right'>
                <Button backgroundColor='green.500' m={5} width={19} onClick={onOpen}>
-                  <HamburgerIcon color='green.50' />
+                  <HamburgerIcon color='#8fd7a7' />
                </Button>
             </Box>
 
@@ -44,7 +44,7 @@ const SmallNav = () => {
             <DrawerOverlay />
             <DrawerContent>
                <DrawerCloseButton />
-               <DrawerHeader>BotanicalSelections</DrawerHeader>
+               <DrawerHeader color="white">Botanical Selections</DrawerHeader>
 
                <DrawerBody>
                   <Stack margin={5}>

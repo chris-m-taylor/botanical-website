@@ -6,24 +6,24 @@ const Nav = ({ socials }) => {
 
    return (
       <>
-         <NextLink href="/">
+         <NextLink href="/" _hover="color:pink">
          <button className="SocialLinkButton">
-            <Link color='#8fd7a7'><Text fontSize="2xl">Home</Text></Link>
+            <Link color='#8fd7a7' _hover="text-decoration:none"><Text fontSize="2xl" fontFamily="Georgia">Home</Text></Link>
          </button>
          </NextLink>
          <NextLink href="/about" passHref={true}>
          <button className="SocialLinkButton">
-            <Link color='#8fd7a7'><Text fontSize="2xl">About</Text></Link>
+            <Link color='#8fd7a7' _hover="text-decoration:none"><Text fontSize="2xl" fontFamily="Georgia">About</Text></Link>
          </button>
          </NextLink>
-         <NextLink href="/shows" passHref={true}>
          <button className="SocialLinkButton">
-            <Link color='#8fd7a7'><Text fontSize="2xl">Shows</Text></Link>
+            <NextLink href="/shows" passHref={true}>
+               <Link color='#8fd7a7' _hover="text-decoration:none"><Text fontSize="2xl" fontFamily="Georgia">Shows</Text></Link>
+            </NextLink>
          </button>
-         </NextLink>
          <NextLink href="contact">
          <button className="SocialLinkButton">
-            <Link color='#8fd7a7'><Text fontSize="2xl">Contact Us</Text></Link>
+            <Link color='#8fd7a7' _hover="text-decoration:none"><Text fontSize="2xl" fontFamily="Georgia" _hover="color:black">Contact Us</Text></Link>
          </button>
          </NextLink>
       </>
