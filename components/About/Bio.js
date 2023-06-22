@@ -8,7 +8,7 @@ const Bio = ({ image, summary, name }) => {
          <Center marginBottom={20}>
                <Show above="1050px">
                      <Flex className={styles.bigContainer} justifyContent="center">
-                        <img src={image.src} className={styles.imgLarge}/>
+                        <img src={image} className={styles.imgLarge}/>
                         <Flex alignItems='center'>
                            <Box>
                               <Text className={styles.name} textAlign='center' color={"#e88fe9"} fontFamily="Georgia">{name}</Text>
@@ -17,6 +17,10 @@ const Bio = ({ image, summary, name }) => {
                         </Flex>
                      </Flex>
                </Show>
+
+
+
+
 
                <Show below="1049px">
                   <Stack className={styles.card} alignItems='center'>

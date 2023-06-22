@@ -1,4 +1,3 @@
-import { ColeImage, ChrisImage, DeanImage } from "../../public/images";
 import Bio from "./Bio"
 
 const ColeSummary = `Cole is a Charleston, SC based musician studying at the College of Charleston and is the
@@ -25,7 +24,9 @@ settings, from jazz ensembles to backing local hip-hop artists to playing in the
 orchestra for theaters. He now makes his living teaching music at a private school in
 Beaufort and playing gigs in the lowcountry area.`
 
-
+const ChrisImage = "/images/ChrisGlitch.jpg"
+const ColeImage = "/images/ColeGlitch.jpg"
+const DeanImage = "/images/DeanGlitch.jpg"
 const AboutUs = () => {
    return (
       <>
