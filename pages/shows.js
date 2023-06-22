@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar/navbar.js";
 export default function Shows() {
   
   return (
-    <Box backgroundColor='black'>
+    <Box backgroundImage={'url(/images/GlitchedBackground.png)'}>
       <Head>
         <title>Shows - Botanical Selctions</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

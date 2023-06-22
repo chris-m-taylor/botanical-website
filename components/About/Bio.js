@@ -25,7 +25,7 @@ const Bio = ({ image, summary, name }) => {
                <Show below="1049px">
                   <Stack className={styles.card} alignItems='center'>
                      <img src={image.src} className={styles.imgSmall} />
-                     <Text className={styles.name} color={"#8fd7a7"}>{name}</Text>
+                     <Text className={styles.name} color={"#e88fe9"}>{name}</Text>
                      <Text textAlign='center' verticalAlign='middle' className={styles.summary}>{summary}</Text>
                   </Stack>
                </Show>
