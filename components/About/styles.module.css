@@ -14,6 +14,7 @@
 
 .bigContainer {
    width: 75%;
+   margin-top: 1%;
 }
 
 .name {
@@ -22,4 +23,8 @@
 
 .summary{
    font-size: 20px;
+}
+
+.bioTextLarge {
+   margin-left: 5%;
 }
