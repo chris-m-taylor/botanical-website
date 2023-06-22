@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 export default function Contact() {
   return(
-    <Box backgroundColor="black">
+    <Box backgroundImage={'url(/images/GlitchedBackground.png)'}>
       <Head>
         <title>Contact - Botanical Selctions</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
