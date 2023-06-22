@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar/navbar";
 
 const About = () => {
    return (
-      <Box backgroundColor='black'>
+      <Box backgroundColor='#f0ebeb'>
          <Head>
             <title>About - Botanical Selctions</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
