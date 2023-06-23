@@ -11,8 +11,8 @@ const Bio = ({ image, summary, name }) => {
                         <img src={image} className={styles.imgLarge}/>
                         <Flex alignItems='center'>
                            <Box className={styles.bioTextLarge} >
-                              <Text className={styles.name} textAlign='center' color={"#e88fe9"} fontFamily="Georgia">{name}</Text>
-                              <Text textAlign='center' className={styles.summary}>{summary}</Text>
+                              <Text className={styles.name} textAlign='left' color={"#e88fe9"} fontFamily="Georgia">{name}</Text>
+                              <Text textAlign='left' className={styles.summary}>{summary}</Text>
                            </Box>
                         </Flex>
                      </Flex>

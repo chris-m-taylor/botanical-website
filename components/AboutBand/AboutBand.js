@@ -9,7 +9,7 @@ from jazz to funk. Having played at the Pour House, Purple Buffalo, and many oth
 
 const AboutBand = () => {
    return(
-      <Text margin={10} textAlign='center' fontSize={20} fontWeight={600}>{botanicalSummary}</Text>
+      <Text margin={10} textAlign='left' fontSize={20} fontWeight={600}>{botanicalSummary}</Text>
    )
 }
 export default AboutBand
