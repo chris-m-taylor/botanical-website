@@ -6,19 +6,22 @@ import React from "react";
 const Socials = () => {
   return(
     <Flex textAlign='center' justifyContent='space-evenly' >
+      <NextLink href="contact">
+         <button bg={"#ffa1f2"} >
+            <Link color='#ffa1f2' _hover="text-decoration:none"><Text fontSize="2xl" fontFamily="Georgia" >BOOK US</Text></Link>
+         </button>
+         </NextLink>
+
       <NextLink href="https://www.instagram.com/botanicalselectionsband/" passHref={true} padding={0} margin={0}>
-      <button className="SocialLinkButton">
         <Link target='_blank' color='#ffa1f2' _hover="text-decoration:none">
-           <Text fontSize="2xl" fontFamily="Georgia">Instagram</Text>
+           <img src='/images/InstaLogo.png'/>
         </Link>
-      </button>
       </NextLink>
+      
       <NextLink href="https://www.youtube.com/channel/UCgqHx-y3cT0fvM0Yo_YBjLA" passHref={true} padding={0} margin={0}>
-      <button className="SocialLinkButton">
-        <Link target='_blank' color='#ffa1f2' _hover="text-decoration:none">
-          <Text fontSize="2xl" fontFamily="Georgia">YouTube</Text>
+        <Link target='_blank' color='#ffa1f2' _hover="color: black">
+          <img src='/images/YTLogo.png'/>
         </Link>
-      </button>
       </NextLink>
     </Flex>
   )

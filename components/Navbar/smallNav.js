@@ -39,7 +39,7 @@ const SmallNav = () => {
             placement='right'
             onClose={onClose}
             finalFocusRef={btnRef}
-            backgroundColor='black'
+            backgroundColor='white'
          >
             <DrawerOverlay />
             <DrawerContent>
